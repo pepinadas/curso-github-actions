@@ -1,5 +1,4 @@
 name: hola-mundo
-run-name: prueba
 on: [push]
 
 jobs:
