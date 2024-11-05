@@ -1,0 +1,22 @@
+name: hola-mundo
+on: [push]
+jobs:
+  setup-java:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Setup Java JDK
+        uses: actions/setup-java@v3.12.0
+        with: 
+          distribution: oracle
+          java-version: 17
+          java-package: jdk
+  run-java:
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Compile and run Java Code
+        run: |
+          javac Main.java
+          java Main
